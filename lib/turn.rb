@@ -6,15 +6,15 @@ def display_board(board)
    puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-def turn
+def turn(board)
     puts "Please enter 1-9:"
-    input = gets.strip
-    index = input_to_index(input)
-    char = current_player
-    if valid_move?(index)
-      move(index, char)
-      display_board
+    answer = gets.chomp
+    answer = input_to_index(answer)
+    if valid_move?(answer, board)
+      move(board, answer)
+      puts display_board(board)
     else
-      turn
-    end
+      puts "That is an invalid entry!"
+      turn(board)
+    end 
 end
