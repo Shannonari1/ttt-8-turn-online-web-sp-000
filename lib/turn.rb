@@ -2,9 +2,8 @@ def input_to_index(input)
   input.to_i - 1
 end
 
-
 def valid_move?(number_entered, board)
-  number_entered.between?(0, 8) && !(position_taken?(board, number_entered))
+  number_entered?(0, 8) && !(position_taken?(board, number_entered))
 end
 
 def move(array, index, name = "X")
