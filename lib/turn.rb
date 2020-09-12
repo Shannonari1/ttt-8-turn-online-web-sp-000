@@ -1,20 +1,12 @@
-def display_board(board)
-   puts " #{board[0]} | #{board[1]} | #{board[2]} "
-   puts "-----------"
-   puts " #{board[3]} | #{board[4]} | #{board[5]} "
-   puts "-----------"
-   puts " #{board[6]} | #{board[7]} | #{board[8]} "
-end
 
 def turn(board)
     puts "Please enter 1-9:"
-    answer = gets.chomp
-    answer = input_to_index(int)
-    if valid_move?(int, board)
-      move(board, int)
-      puts display_board(board)
-    else
-      puts "That is an invalid entry!"
+    user_input = gets.chomp
+    index = input_to_index(user_input)
+    if !valid_move?(board, index)
       turn(board)
+    else
+      move(board, index, current_player(board))
     end
+    display_board(board)
 end
