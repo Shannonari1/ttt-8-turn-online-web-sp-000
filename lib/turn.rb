@@ -8,5 +8,5 @@ def turn(board)
     else
       puts "That is an invalid entry!"
       turn(board)
-    end 
+    end
 end
