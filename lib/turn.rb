@@ -1,6 +1,6 @@
 def input_to_index(input)
   input.to_i - 1
-end 
+end
 
 def valid_move?(number_entered, board)
   number_entered.between?(0, 8) && !(position_taken?(board, number_entered))
@@ -11,7 +11,7 @@ def move(array, index, name = "X")
 end
 
 def position_taken?(board, answer)
-  board[answer] != " " 
+  board[answer] != " "
 end
 
 def display_board(board)
@@ -32,5 +32,5 @@ def turn(board)
     else
       puts "That is an invalid entry!"
       turn(board)
-    end 
+    end
 end
