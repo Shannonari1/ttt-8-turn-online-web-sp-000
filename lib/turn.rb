@@ -6,8 +6,6 @@ end
 def valid_move?(number_entered, board)
   if number_entered.between?(0, 8) && !(position_taken?(board, number_entered))
     return true
-  else
-    return false
   end
 end
 
