@@ -1,3 +1,19 @@
+def input_to_index(input)
+  input.to_i - 1
+end
+
+
+def valid_move?(number_entered, board)
+  number_entered.between?(0, 8) && !(position_taken?(board, number_entered))
+end
+
+def move(array, index, name = "X")
+  array[index] = name
+end
+
+def position_taken?(board, answer)
+  board[answer] != " "
+end
 def display_board(board)
    puts " #{board[0]} | #{board[1]} | #{board[2]} "
    puts "-----------"
