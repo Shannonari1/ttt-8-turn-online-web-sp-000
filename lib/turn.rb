@@ -2,8 +2,8 @@ def input_to_index(input)
   input.to_i - 1
 end
 
-def valid_move?(input_to_index, board)
-  input_to_index?(0, 8) && !(position_taken?(board, input_to_index))
+def valid_move?(input, board)
+  input?(0, 8) && !(position_taken?(board, input)
 end
 
 def move(array, index, name = "X")
