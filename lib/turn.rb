@@ -5,11 +5,11 @@ def display_board
    puts "-----------"
    puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
  end
- 
+
  def input_to_index(user_input)
    user_input.to_i - 1
  end
- 
+
   def move(position, char)
    @board[position] = char
  end
@@ -21,7 +21,7 @@ def display_board
  def valid_move?(index)
    index.between?(0,8) && !position_taken?(index)
  end
- 
+
  def turn_count
    number_of_turns = 0
    @board.each do |space|
@@ -30,7 +30,7 @@ def display_board
    end
  end
  return number_of_turns
- 
+
 def turn
    puts "Please enter 1-9:"
    input = gets.strip
